@@ -9,7 +9,7 @@ object PairMaker {
             val p1 = randomElementFromGivenList(list)
             val p2 = randomElementFromGivenList(list)
             // if cannot find match pair within 5 rounds, use the next match, the input source is not distributed evenly
-            if (p1.team != p2.team || iter == 5) {
+            if ((p1.name != p2.name && p1.team != p2.team) || iter == 5) {
                 p1ToP2[p1] = p2
                 list.remove(p1)
                 list.remove(p2)
