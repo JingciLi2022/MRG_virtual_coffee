@@ -23,4 +23,19 @@ object CsvParser {
         writer.flush()
     }
 
+    /**
+     * Read only email fields of history/blacklist file
+     */
+    fun readCsvDoubleColumn(inputStream: InputStream): Set<Pair<String, String>> {
+        val reader = inputStream.bufferedReader()
+        return reader.lineSequence()
+            .filter { it.isNotBlank() }
+            .map {
+                val (_, email1, _, _, email2, _) = it.split(',', ignoreCase = false, limit = 6)
+                Pair(email1, email2)
+            }.toSet()
+
+    }
 }
+
+private operator fun <E> List<E>.component6(): E  = this[6]
