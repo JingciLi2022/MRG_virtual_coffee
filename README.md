@@ -1,13 +1,28 @@
-# MRG_virtual_coffee
+# MRG Virtual Coffee
 
-Put MRG_members.csv file under root path and run the project, see the match result in MRG_match.csv file
+### Introduce
+This is a script to generate pairing list for MRG quarterly virtual coffee chat.
+
+### How to run
+1. Put member info in MRG_members.csv file under /input directory
+2. (Optional) Copy history pairing file under input/history folder if necessary
+3. (Optional) Add blacklist file under input folder if necess
+4. Execute the program and find the matching result under /output directory
+
+### Matching rules
+1. Members within the same team cannot be matched
+2. Member pairs who have been matched in previous runs cannot be matched
+3. Member pairs in black list cannot be matched
 
 ### Mock
 
 input file
 
-<img width="410" alt="input" src="https://user-images.githubusercontent.com/112975159/236697422-fdff26c8-5c0d-4d80-94d7-13bddf2f4642.png">
+<img width="498" alt="Screenshot 2023-07-13 at 12 44 17 PM" src="https://github.com/JingciLi2022/MRG_virtual_coffee/assets/112975159/6bb9aeaf-8144-4206-a52e-35431f00c6af">
+
+
 
 output file
 
-<img width="761" alt="output" src="https://user-images.githubusercontent.com/112975159/236697425-172b8ceb-7cee-4a94-81f6-601314eaae3e.png">
+<img width="764" alt="Screenshot 2023-07-13 at 12 47 07 PM" src="https://github.com/JingciLi2022/MRG_virtual_coffee/assets/112975159/e8e53eb6-fca3-4d49-997c-cbccce106c6c">
+
